@@ -68,3 +68,4 @@ t.insert("application")
 console.log(t.search("app"))
 console.log(t.startWith("ap"))
 console.log(t.findWordsWithPrefix("app"))
+
