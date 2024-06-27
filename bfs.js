@@ -20,6 +20,6 @@ function bfs(graph, startNode){
 const graph = {
     "A" : ["B", "C"],
     "B" : ["A", "C"],
-    "C" : ["A", "B", "C"]
+    "C" : ["A", "B"]
 }
 console.log(bfs(graph,"A"))
