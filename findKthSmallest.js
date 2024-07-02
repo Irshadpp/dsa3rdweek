@@ -5,15 +5,15 @@ class Node{
     }
 }
 
-let count = 0;
 
-function findKthLargest(node, k){
+let count = 0;
+function findKthSmallest(node, k){
     if(node){
-        let result = findKthLargest(node.right, k);
+        let result = findKthSmallest(node.left, k);
         if(result) return result;
         count++;
-        if(count === k) return node.data
-        result = findKthLargest(node.left, k);
+        if(k === count) return node.data;
+        result = findKthSmallest(node.right, k);
         if(result) return result;
     }
     return undefined;
@@ -22,10 +22,11 @@ function findKthLargest(node, k){
 
 const root = new Node(10);
 root.left = new Node(5);
-root.left.left = new Node(3);
 root.left.right = new Node(8);
-root.right = new Node(15);
-root.right.right = new Node(20);
-root.right.left = new Node(12);
+root.left.left = new Node(3);
+root.right = new Node(20);
+root.right.right = new Node(25);
+root.right.left = new Node(15);
 
-console.log(findKthLargest(root, 3))
+
+console.log(findKthSmallest(root, 1));
