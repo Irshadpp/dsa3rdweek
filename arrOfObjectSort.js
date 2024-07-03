@@ -1,8 +1,8 @@
-let students = [
-    { name: "Alice", age: 25, grade: "A" },
-    { name: "Bob", age: 20, grade: "B" },
-    { name: "Charlie", age: 23, grade: "C" },
-  ];
+// let students = [
+//     { name: "Alice", age: 25, grade: "A" },
+//     { name: "Bob", age: 20, grade: "B" },
+//     { name: "Charlie", age: 23, grade: "C" },
+//   ];
 
 
 // function sort(arr){
@@ -51,29 +51,29 @@ let students = [
 
 
 
-function sort(arr, start, end){
-    if(start>=end){
-        return
-    }
+// function sort(arr, start, end){
+//     if(start>=end){
+//         return
+//     }
 
-    let pivot = partition(arr, start, end);
-    sort(arr, start, pivot-1);
-    sort(arr, pivot+1, end);
-}
+//     let pivot = partition(arr, start, end);
+//     sort(arr, start, pivot-1);
+//     sort(arr, pivot+1, end);
+// }
 
-function partition(arr, start, end){
-    let pivot = arr[end];
-    let j = start -1;
-    for(let i = start; i<end; i++){
-        if(pivot.age>arr[i].age){
-            j++;
-            [arr[i], arr[j]] = [arr[j], arr[i]];
-        }
-    }
-    j++;
-    [arr[j], arr[end]] = [arr[end], arr[j]];
-    return j;
-}
+// function partition(arr, start, end){
+//     let pivot = arr[end];
+//     let j = start -1;
+//     for(let i = start; i<end; i++){
+//         if(pivot.age>arr[i].age){
+//             j++;
+//             [arr[i], arr[j]] = [arr[j], arr[i]];
+//         }
+//     }
+//     j++;
+//     [arr[j], arr[end]] = [arr[end], arr[j]];
+//     return j;
+// }
 
-sort(students, 0, students.length-1);
-console.log(students);
+// sort(students, 0, students.length-1);
+// console.log(students);
